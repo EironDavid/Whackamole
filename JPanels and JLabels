@@ -1,0 +1,39 @@
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+
+
+public class Game extends JFrame{
+
+    public Game() {
+        setTitle("Whack A Mole");
+        setResizable(false);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setBounds(100, 100, 608, 720);
+
+        JPanel contentPane = new JPanel();
+        contentPane = new JPanel();
+        contentPane.setBackground(new Color(0, 51, 0));
+        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+        contentPane.setLayout(null);
+
+        JLabel lblTitle = new JLabel("Whack A Mole");
+        lblTitle.setForeground(new Color(153, 204, 0));
+        lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
+        lblTitle.setFont(new Font("Century Gothic", Font.BOLD, 20));
+        lblTitle.setBounds(0, 0, 602, 47);
+        contentPane.add(lblTitle);
+
+        setContentPane(contentPane);
+    }
+
+    public static void main(String[] args) {
+        Game frame = new Game();
+        frame.setVisible(true);
+    }
+}
